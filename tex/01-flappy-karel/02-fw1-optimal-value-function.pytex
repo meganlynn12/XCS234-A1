@@ -1,0 +1,10 @@
+\item \points{1b}
+
+
+Consider different possible grids and grid shading (with walls at the border similar to Flappy World 1) in which the green target square is reacheable from the starting square. What value of $r_s$ from part (a) would cause the optimal policy to return the shortest path to the green target square in all cases? Using this value of $r_s$ find the optimal value function for each square in Flappy World 1. What is the optimal action from square 27? 
+
+
+🐍
+import re
+with open('submission.tex') as f: print((re.search(r'% <SCPD_SUBMISSION_TAG>_1b(.*?)% <SCPD_SUBMISSION_TAG>_1b', f.read(), re.DOTALL)).group(1))
+🐍
