@@ -21,7 +21,21 @@ Now consider Flappy World 2. It is the same as Flappy World 1, except there are 
   \label{fig:fig2}
   \end{figure}
 
-Let $r_s \in \{-4,-1,0,1\}$. Starting in \textbf{square 3}, for each of the possible values of $r_s$ briefly explain what the optimal policy would be in Flappy World 2. Once again consider different grids and grid shading (without walls at either end similar to Flappy World 2) in which the green target square is reacheable from the starting square. Using the value of $r_s$, that would cause the optimal policy to return the shortest path to the green target square for all cases, find the optimal value for each square in Flappy World 2. What is the optimal action from square 27?
+Let $r_s \in \{-4,-1,0,1\}$. Starting in \textbf{square 3}, for each of the possible values of $r_s$:
+
+\begin{itemize}
+  \item Briefly explain what the optimal policy would be in Flappy World 2?
+\end{itemize}
+
+Once again consider different grids and grid shading (without walls at either end similar to Flappy World 2) in which the green target square is reacheable from the starting square.
+
+\begin{itemize}
+  \item What is the value of $r_s$ that would cause the optimal policy to return the shortest path to the green target square for all cases?
+
+  \item Find the optimal value for each square in Flappy World 2 using the value of $r_s$, that would cause the optimal policy to return the shortest path to the green target square for all cases?
+
+  \item What is the optimal action from square 27?
+\end{itemize}
 
 
 \textit{Hint: There are three possible long-term behaviours, terminate through a red square, terminate through a green square and do not ever terminate. Consider these cases when formulating the optimal policy for each value of $r_{s}$.}
