@@ -38,8 +38,8 @@ DET4 = [
     0.9,
     1.0,
     0.0,
-]  # True values of states in Deterministic-4x4-FrozenLake-v0
-HOLES4 = [5, 7, 11, 12, 15]  # Location of holes in Deterministic-4x4-FrozenLake-v0
+]  # True values of states in Deterministic-4x4-FrozenLake-v1
+HOLES4 = [5, 7, 11, 12, 15]  # Location of holes in Deterministic-4x4-FrozenLake-v1
 
 ### BEGIN_HIDE ###
 ### END_HIDE ###
