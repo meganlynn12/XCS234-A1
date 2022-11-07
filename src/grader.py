@@ -56,12 +56,12 @@ def _policy_performance(env, algorithm, num_episodes, gamma=0.9, tol=1e-3):
     sum_rewards = 0
     for _ in range(num_episodes):
         episode_reward = 0
-        state = env.reset()
-        done = False
+        state, info = env.reset()
+        terminated, truncated = False, False
         count = 0
-        while not done and count < 10000:
+        while not (terminated or truncated) and count < 10000:
             action = policy[state]
-            state, reward, done, info = env.step(action)
+            state, reward, terminated, truncated, info = env.step(action)
             episode_reward += reward
             count += 1
         sum_rewards += episode_reward

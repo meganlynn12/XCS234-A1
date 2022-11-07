@@ -213,17 +213,17 @@ def render_single(env, policy, max_steps=100):
             Policy (np.array[env.nS]): The action to take at a given state
     """
     episode_reward = 0
-    ob = env.reset()
+    ob, _ = env.reset()
     for t in range(max_steps):
         env.render()
         time.sleep(0.25)
         a = policy[ob]
-        ob, rew, done, _ = env.step(a)
+        ob, rew, terminated, truncated, _ = env.step(a)
         episode_reward += rew
-        if done:
+        if terminated or truncated:
             break
     env.render()
-    if not done:
+    if not (terminated or truncated):
         print("The agent didn't reach a terminal state in {} steps.".format(max_steps))
     else:
         print("Episode reward: %f" % episode_reward)
@@ -237,7 +237,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Make gym environment
-    env = gym.make(args.env)
+    env = gym.make(args.env, render_mode="human")
 
     if (args.algorithm == "both") | (args.algorithm == "policy_iteration"):
         print("\n" + "-" * 25 + "\nBeginning Policy Iteration\n" + "-" * 25)
